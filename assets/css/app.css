@@ -160,7 +160,7 @@ a:after {
 /* ---------------------------------------------------------
  *	Body
  * --------------------------------------------------------- */
-/* 
+/*
  * Sections
  * --------------------------------------------------------- */
 .section {
@@ -238,7 +238,7 @@ p.copyright {
   text-align: center;
   font-size: 14px;
 }
-/* 
+/*
  * Social icons
  * --------------------------------------------------------- */
 .social {
@@ -732,8 +732,8 @@ p.copyright {
 	width: 100%;
 	z-index: 2001;
 }
-.navbar-default .navbar-nav > .active > a, 
-.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus{
 	color: #869198;
 	font-weight: 700;
@@ -1210,7 +1210,7 @@ form.signup button.btn {
     box-shadow: 0 0 1px #cccccc, 15px 30px 1px #dddddd, -15px 30px 1px #cccccc;
   }
 }
-/* 
+/*
  * About
  * --------------------------------------------------------- */
 .feature-box-container {
@@ -1260,7 +1260,7 @@ form.signup button.btn {
   height: 250px;
   width: 387px;
 }
-/* 
+/*
  * Portfolio
  * --------------------------------------------------------- */
 #portfolio-container {
@@ -1368,7 +1368,7 @@ form.signup button.btn {
     width: 20%;
   }
 }
-/* 
+/*
  * Skills
  * --------------------------------------------------------- */
 .personal-skills h4 {
@@ -1394,7 +1394,7 @@ form.signup button.btn {
 .skills-ul {
   font-size: 14px;
 }
-/* 
+/*
  * Facts
  * --------------------------------------------------------- */
 #facts h1 {
@@ -1408,7 +1408,7 @@ form.signup button.btn {
     float: left;
   }
 }
-/* 
+/*
  * Contact
  * --------------------------------------------------------- */
 #contact {
@@ -1496,7 +1496,7 @@ form.signup button.btn {
     padding: 0;
   }
 }
-/* 
+/*
  * Home
  * --------------------------------------------------------- */
 .heading {
@@ -1511,7 +1511,7 @@ form.signup button.btn {
   visibility: hidden;
 }
 lesshat-selector {
-  -lh-property: 0; } 
+  -lh-property: 0; }
 @-webkit-keyframes arrowBounce{ 0%{-webkit--webkit-transform:translateY(-20px);-moz--webkit-transform:translateY(-20px);-ms--webkit-transform:translateY(-20px);-webkit-transform:translateY(-20px)}50%{-webkit--webkit-transform:translateY(-10px);-moz--webkit-transform:translateY(-10px);-ms--webkit-transform:translateY(-10px);-webkit-transform:translateY(-10px)}100%{-webkit--webkit-transform:translateY(-20px);-moz--webkit-transform:translateY(-20px);-ms--webkit-transform:translateY(-20px);-webkit-transform:translateY(-20px)}}
 @-moz-keyframes arrowBounce{ 0%{-webkit--moz-transform:translateY(-20px);-moz--moz-transform:translateY(-20px);-ms--moz-transform:translateY(-20px);-moz-transform:translateY(-20px)}50%{-webkit--moz-transform:translateY(-10px);-moz--moz-transform:translateY(-10px);-ms--moz-transform:translateY(-10px);-moz-transform:translateY(-10px)}100%{-webkit--moz-transform:translateY(-20px);-moz--moz-transform:translateY(-20px);-ms--moz-transform:translateY(-20px);-moz-transform:translateY(-20px)}}
 @-o-keyframes arrowBounce{ 0%{-webkit--o-transform:translateY(-20px);-moz--o-transform:translateY(-20px);-ms--o-transform:translateY(-20px);-o-transform:translateY(-20px)}50%{-webkit--o-transform:translateY(-10px);-moz--o-transform:translateY(-10px);-ms--o-transform:translateY(-10px);-o-transform:translateY(-10px)}100%{-webkit--o-transform:translateY(-20px);-moz--o-transform:translateY(-20px);-ms--o-transform:translateY(-20px);-o-transform:translateY(-20px)}}
@@ -1726,4 +1726,8 @@ lesshat-selector {
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 5px;
+}
+/* ------------------------------- */
+span{
+  color: #646464;
 }

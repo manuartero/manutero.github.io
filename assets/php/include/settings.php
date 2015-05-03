@@ -1,7 +1,7 @@
 <?php
 
 	// Contact
-	$to = 'YOUR-EMAIL-ADDRESS';
-    $subject = 'Subject here...';
+	$to = 'manutero.developer@gmail.com';
+    $subject = 'Looking for a developer';
 
 ?>
