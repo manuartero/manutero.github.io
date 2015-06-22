@@ -14,6 +14,7 @@ var httpGet = {type: "GET", crossDomain: true},
         steamid: "76561198034010352",
         format:"json"
       };
+      httpGet.dataType = 'jsonp';
       $.ajax(httpGet).done(doneSteamCallback);
     },
     stackCall = function() {
