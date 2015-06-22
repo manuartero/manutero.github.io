@@ -213,14 +213,14 @@
 						</div>
 						<h6>Ruby - Ruby on Rails</h6>
 						<div class="progress">
-							<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-								70%
+							<div class="progress-bar" role="progressbar" aria-valuenow="71" aria-valuemin="0" aria-valuemax="100" style="width: 71%;">
+								71%
 							</div>
 						</div>
 						<h6>JavaScript - Node.js</h6>
 						<div class="progress">
-							<div class="progress-bar" role="progressbar" aria-valuenow="61" aria-valuemin="0" aria-valuemax="100" style="width: 61%;">
-								61%
+							<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+								70%
 							</div>
 						</div>
 						<h6>C / C++</h6>
@@ -405,12 +405,12 @@
 					<div class="col-sm-3">
 						<h1><i class="fa fa-github"></i></h1>
 						<h1 class="counter" id="github-badge">?</h1>
-						<p> Repos &amp; Orgs</p>
+						<p> public repos </p>
 					</div>
 					<div class="col-sm-3">
 						<h1><i class="fa fa-language"></i></h1>
 						<h1 class="counter">5</h1>
-						<p> certificados </p>
+						<p> certificates </p>
 					</div>
 				</div>
 			</div>
@@ -489,52 +489,8 @@
 		<script src="assets/js/jquery.scrollTo.min.js"></script>
 		<script src="assets/js/app.js"></script>
 
-		<!-- steam API -->
-		<script type="text/javascript">
-			var httpGet = {
-						type: "GET",
-						url: "http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001",
-						data: {
-							key: "60F41E3A058F8B9E38FC54D201461EAC",
-							steamid: "76561198034010352",
-							format:"json"
-						},
-						crossDomain: true
-					},
-					doneCallback = function(data) {
-						document.getElementById("steam-badge").innerHTML = data.response.game_count;
-					};
-			$.ajax(httpGet).done(doneCallback);
-		</script>
-
-		<!-- stack API -->
-		<script type="text/javascript">
-			var httpGet = {
-						type: "GET",
-						url: "https://api.stackexchange.com/2.2/users/1614677",
-						data: { site: "stackoverflow" },
-						crossDomain: true
-					},
-					doneCallback = function(data) {
-						document.getElementById("stack-badge").innerHTML = data.items[0].reputation;
-					};
-			$.ajax(httpGet).done(doneCallback);
-		</script>
-
-		<!-- github API -->
-		<script type="text/javascript">
-			var count = 0,
-					httpGet = {
-						type: "GET",
-						url: "https://api.github.com/users/manutero",
-						crossDomain: true
-					},
-					doneUserCallback = function(data) {
-						count += data.public_repos;
-						document.getElementById("github-badge").innerHTML = count;
-					};
-			$.ajax(httpGet).done(doneUserCallback);
-		</script>
+		<!-- Badges refresh -->
+		<script src="./badges_scripts.js" type="text/javascript"></script>
 
 	</body>
 </html>
