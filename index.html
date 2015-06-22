@@ -394,18 +394,18 @@
 				<div class="row text-center wow fadeInDown" data-wow-duration="0.7s" data-wow-delay="0s">
 					<div class="col-sm-3">
 						<h1><i class="fa fa-steam-square"></i></h1>
-						<h1 class="counter">141</h1>
-						<p> juegos </p>
+						<h1 class="counter" id="steam-badge">?</h1>
+						<p> games </p>
 					</div>
 					<div class="col-sm-3">
 						<h1><i class="fa fa-stack-overflow"></i></h1>
-						<h1 class="counter">116</h1>
-						<p> puntos </p>
+						<h1 class="counter" id="stack-badge">?</h1>
+						<p> points </p>
 					</div>
 					<div class="col-sm-3">
 						<h1><i class="fa fa-github"></i></h1>
-						<h1 class="counter">193</h1>
-						<p> Contribuciones </p>
+						<h1 class="counter" id="github-badge">?</h1>
+						<p> Repos &amp; Orgs</p>
 					</div>
 					<div class="col-sm-3">
 						<h1><i class="fa fa-language"></i></h1>
@@ -488,5 +488,53 @@
 		<script src="assets/js/jquery.knob.min.js"></script>
 		<script src="assets/js/jquery.scrollTo.min.js"></script>
 		<script src="assets/js/app.js"></script>
+
+		<!-- steam API -->
+		<script type="text/javascript">
+			var httpGet = {
+						type: "GET",
+						url: "http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001",
+						data: {
+							key: "60F41E3A058F8B9E38FC54D201461EAC",
+							steamid: "76561198034010352",
+							format:"json"
+						},
+						crossDomain: true
+					},
+					doneCallback = function(data) {
+						document.getElementById("steam-badge").innerHTML = data.response.game_count;
+					};
+			$.ajax(httpGet).done(doneCallback);
+		</script>
+
+		<!-- stack API -->
+		<script type="text/javascript">
+			var httpGet = {
+						type: "GET",
+						url: "https://api.stackexchange.com/2.2/users/1614677",
+						data: { site: "stackoverflow" },
+						crossDomain: true
+					},
+					doneCallback = function(data) {
+						document.getElementById("stack-badge").innerHTML = data.items[0].reputation;
+					};
+			$.ajax(httpGet).done(doneCallback);
+		</script>
+
+		<!-- github API -->
+		<script type="text/javascript">
+			var count = 0,
+					httpGet = {
+						type: "GET",
+						url: "https://api.github.com/users/manutero",
+						crossDomain: true
+					},
+					doneUserCallback = function(data) {
+						count += data.public_repos;
+						document.getElementById("github-badge").innerHTML = count;
+					};
+			$.ajax(httpGet).done(doneUserCallback);
+		</script>
+
 	</body>
 </html>
