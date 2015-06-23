@@ -1,5 +1,6 @@
-var httpGet = {type: "GET", crossDomain: true},
+var httpGet = {type: "GET"},
     doneSteamCallback = function(data) {
+      console.log(data);
       document.getElementById("steam-badge").innerHTML = data.response.game_count;
     },
     doneStackCallback = function(data) {
@@ -14,7 +15,6 @@ var httpGet = {type: "GET", crossDomain: true},
         steamid: "76561198034010352",
         format:"json"
       };
-      httpGet.dataType = 'jsonp';
       $.ajax(httpGet).done(doneSteamCallback);
     },
     stackCall = function() {
