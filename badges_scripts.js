@@ -1,12 +1,12 @@
 var httpGet = {type: "GET"},
     doneSteamCallback = function(data) {
-      document.getElementById("steam-badge").innerHTML = data.response.game_count || 149;
+      document.getElementById("steam-badge").innerHTML = data.response.game_count;
     },
     doneStackCallback = function(data) {
-      document.getElementById("stack-badge").innerHTML = data.items[0].reputation || 249;
+      document.getElementById("stack-badge").innerHTML = data.items[0].reputation;
     },
     doneGithubCallback = function(data) {
-      document.getElementById("github-badge").innerHTML = data.public_repos || 17;
+      document.getElementById("github-badge").innerHTML = data.public_repos;
     },
     steamCall = function() {
       httpGet.url = "http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001";
